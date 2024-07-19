@@ -4708,7 +4708,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.HTMLElement,
 		C3.Plugins.LocalStorage,
 		C3.ScriptsInEvents.Gamesheet_Event1_Act1,
-		C3.Plugins.LocalStorage.Acts.SetItem,
 		C3.ScriptsInEvents.Gamesheet_Event2_Act1,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Cnds.OnLayoutStart,
@@ -4911,11 +4910,6 @@ function or(l, r)
 }
 
 self.C3_ExpressionFuncs = [
-		() => "WalletConnect",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
 		() => "Loading",
 		() => 0,
 		() => 16,
@@ -4957,6 +4951,10 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 3);
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
 		},
 		() => "Update",
 		() => "+1",

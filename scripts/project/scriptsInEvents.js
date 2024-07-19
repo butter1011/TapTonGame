@@ -1048,9 +1048,9 @@ const scriptsInEvents = {
 
 	async Gamesheet_Event2_Act1(runtime, localVars)
 	{
-		if(!TON_CONNECT_UI.TonConnectUI.waitForWalletConnection){
+		if(TON_CONNECT_UI.TonConnectUI.waitForWalletConnection){
 			runtime.globalVars.WalletConnected = True;
-		}else{
+		} else {
 			runtime.globalVars.WalletConnected = false;
 		}
 		
