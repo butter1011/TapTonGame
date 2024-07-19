@@ -1048,11 +1048,15 @@ const scriptsInEvents = {
 
 	async Gamesheet_Event2_Act1(runtime, localVars)
 	{
-		const currentIsConnectedStatus = TON_CONNECT_UI.TonConnectUI.waitForWalletConnection;
-		runtime.globalVars.WalletConnected = currentIsConnectedStatus;
+		if(!TON_CONNECT_UI.TonConnectUI.waitForWalletConnection){
+			runtime.globalVars.WalletConnected = True;
+		}else{
+			runtime.globalVars.WalletConnected = false;
+		}
+		
 	},
 
-	async Gamesheet_Event5_Act2(runtime, localVars)
+	async Gamesheet_Event5_Act1(runtime, localVars)
 	{
 		const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
 			manifestUrl: 'https://TON-Titan.vercel.app/tonconnect-manifest.json',
