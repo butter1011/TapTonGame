@@ -1031,6 +1031,7 @@ const scriptsInEvents = {
 	{
 		async function connectToWallet() {
 			const connectedWallet = await tonConnectUI.connectWallet();
+			runtime.objects.LocalStorage.setItem("WalletConnect", true);
 			// Do something with connectedWallet if needed
 			console.log(connectedWallet);
 		}
@@ -1049,12 +1050,7 @@ const scriptsInEvents = {
 		});
 	},
 
-	async Gamesheet_Event6_Act1(runtime, localVars)
-	{
-		console.log("Missing the WalletInfo");
-	},
-
-	async Gamesheet_Event14_Act1(runtime, localVars)
+	async Gamesheet_Event13_Act1(runtime, localVars)
 	{
 		runtime.callFunction("walletConnect");
 	}
