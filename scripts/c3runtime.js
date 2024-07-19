@@ -4882,7 +4882,6 @@ self.C3_ExpressionFuncs = [
 		() => 1,
 		() => 2,
 		() => "ton-connect-ui_preferred-wallet",
-		() => "ton-connect-ui_wallet-info",
 		() => 0.05,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
