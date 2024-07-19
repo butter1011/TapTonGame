@@ -1032,6 +1032,9 @@ const scriptsInEvents = {
 		async function connectToWallet() {
 			const connectedWallet = await tonConnectUI.connectWallet();
 			runtime.objects.LocalStorage.setItem("WalletConnect", true);
+			const walletlog = runtime.objects.LocalStorage.getItem("WalletConnect");
+			
+			console.log("-------->", walletlog);
 			// Do something with connectedWallet if needed
 			console.log(connectedWallet);
 		}

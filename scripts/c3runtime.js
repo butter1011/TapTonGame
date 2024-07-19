@@ -4880,7 +4880,6 @@ self.C3_ExpressionFuncs = [
 		() => 1,
 		() => 2,
 		() => "WalletConnect",
-		() => "walletConnect",
 		() => 0.05,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
