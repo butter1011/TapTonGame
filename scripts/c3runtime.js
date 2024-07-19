@@ -4880,6 +4880,7 @@ self.C3_ExpressionFuncs = [
 		() => 16,
 		() => 1,
 		() => 2,
+		() => "ton-connect-ui_wallet-info",
 		() => "walletConnect",
 		() => 0.05,
 		p => {
