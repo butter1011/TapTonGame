@@ -1047,6 +1047,14 @@ const scriptsInEvents = {
 		console.log(tonConnectUI);
 	},
 
+	async Gamesheet_Event5_Act2(runtime, localVars)
+	{
+		const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+			manifestUrl: 'https://TON-Titan.vercel.app/tonconnect-manifest.json',
+			buttonRootId: 'ton-connect',
+		});
+	},
+
 	async Gamesheet_Event18_Act1(runtime, localVars)
 	{
 		runtime.callFunction("walletConnect");

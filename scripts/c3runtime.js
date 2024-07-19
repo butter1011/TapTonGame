@@ -4719,6 +4719,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.LocalStorage.Acts.GetItem,
 		C3.Plugins.LocalStorage.Cnds.OnItemGet,
 		C3.Plugins.System.Acts.SetBoolVar,
+		C3.ScriptsInEvents.Gamesheet_Event5_Act2,
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.Sprite.Acts.SetWidth,
 		C3.Plugins.System.Acts.AddVar,
