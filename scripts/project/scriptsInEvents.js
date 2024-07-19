@@ -1031,9 +1031,6 @@ const scriptsInEvents = {
 	{
 		async function connectToWallet() {
 			const connectedWallet = await tonConnectUI.connectWallet();
-			if(connectedWallet.getWallets()){
-				runtime.globalVars.WalletConnected = true;
-			}
 			// Do something with connectedWallet if needed
 			console.log(connectedWallet);
 		}
@@ -1050,18 +1047,16 @@ const scriptsInEvents = {
 			manifestUrl: 'https://TON-Titan.vercel.app/tonconnect-manifest.json',
 			buttonRootId: 'ton-connect'
 		});
-		
-		runtime.callFunction("walletConnect");
 	},
 
-	async Gamesheet_Event13_Act1(runtime, localVars)
+	async Gamesheet_Event6_Act1(runtime, localVars)
 	{
-		runtime.callFunction("walletConnect");
+		console.log("Missing the WalletInfo");
 	},
 
-	async Gamesheet_Event18(runtime, localVars)
+	async Gamesheet_Event14_Act1(runtime, localVars)
 	{
-		
+		runtime.callFunction("walletConnect");
 	}
 
 };

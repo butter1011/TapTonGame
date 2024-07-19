@@ -4690,10 +4690,13 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetSize,
 		C3.Plugins.System.Acts.SetLayerVisible,
 		C3.ScriptsInEvents.Gamesheet_Event3_Act6,
+		C3.Plugins.LocalStorage.Acts.CheckItemExists,
 		C3.Plugins.LocalStorage.Cnds.OnItemExists,
 		C3.Plugins.LocalStorage.Acts.GetItem,
 		C3.Plugins.LocalStorage.Cnds.OnItemGet,
 		C3.Plugins.System.Acts.SetBoolVar,
+		C3.Plugins.LocalStorage.Cnds.OnItemMissing,
+		C3.ScriptsInEvents.Gamesheet_Event6_Act1,
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.Sprite.Acts.SetWidth,
 		C3.Plugins.System.Acts.AddVar,
@@ -4712,12 +4715,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.Text.Acts.SetText,
-		C3.ScriptsInEvents.Gamesheet_Event13_Act1,
+		C3.ScriptsInEvents.Gamesheet_Event14_Act1,
 		C3.Plugins.Text.Acts.SetVisible,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Text.Acts.SetY,
-		C3.Plugins.Text.Exps.Y,
-		C3.ScriptsInEvents.Gamesheet_Event18
+		C3.Plugins.Text.Exps.Y
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4879,8 +4881,8 @@ self.C3_ExpressionFuncs = [
 		() => 16,
 		() => 1,
 		() => 2,
-		() => "ton-connect-ui_wallet-info",
 		() => "ton-connect-ui_preferred-wallet",
+		() => "ton-connect-ui_wallet-info",
 		() => 0.05,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
