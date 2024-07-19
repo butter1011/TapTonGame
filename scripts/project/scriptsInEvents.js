@@ -1066,16 +1066,20 @@ const scriptsInEvents = {
 
 	async Gamesheet_Event18_Act1(runtime, localVars)
 	{
+		const status = await TON_CONNECT_UI.TonConnectUI.waitForWalletConnection;
 		if(!TON_CONNECT_UI.TonConnectUI.waitForWalletConnection) {
 			runtime.callFunction("walletConnect");
 		}
+		console.log("status-------------->", status);
 	},
 
 	async Gamesheet_Event19_Act4(runtime, localVars)
 	{
+		const status = await TON_CONNECT_UI.TonConnectUI.waitForWalletConnection;
 		if(!TON_CONNECT_UI.TonConnectUI.waitForWalletConnection) {
 			runtime.callFunction("walletConnect");
 		}
+		console.log("status-------------->", status);
 	}
 
 };
