@@ -4683,6 +4683,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text,
 		C3.Plugins.HTMLElement,
 		C3.Plugins.LocalStorage,
+		C3.ScriptsInEvents.Gamesheet_Event1_Act1,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Sprite.Acts.SetX,
@@ -4703,7 +4704,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Tween.Cnds.IsPlaying,
 		C3.Plugins.Sprite.Acts.SetOpacity,
 		C3.Behaviors.Tween.Exps.Value,
-		C3.ScriptsInEvents.Gamesheet_Event11_Act1,
+		C3.ScriptsInEvents.Gamesheet_Event12_Act1,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.System.Cnds.CompareBoolVar,
 		C3.Plugins.Sprite.Acts.Spawn,
@@ -4712,12 +4713,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.Text.Acts.SetText,
-		C3.ScriptsInEvents.Gamesheet_Event13_Act1,
+		C3.ScriptsInEvents.Gamesheet_Event14_Act1,
 		C3.Plugins.Text.Acts.SetVisible,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Text.Acts.SetY,
 		C3.Plugins.Text.Exps.Y,
-		C3.ScriptsInEvents.Gamesheet_Event18_Act1,
 		C3.ScriptsInEvents.Gamesheet_Event19
 	];
 };
