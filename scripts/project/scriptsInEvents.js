@@ -1027,7 +1027,7 @@ var __defProp=Object.defineProperty,__defProps=Object.defineProperties,__getOwnP
 
 const scriptsInEvents = {
 
-	async Gamesheet_Event9_Act1(runtime, localVars)
+	async Gamesheet_Event11_Act1(runtime, localVars)
 	{
 		const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
 			manifestUrl: 'https://TON-Titan.vercel.app/tonconnect-manifest.json',
@@ -1035,10 +1035,16 @@ const scriptsInEvents = {
 		});
 	},
 
-	async Gamesheet_Event11_Act1(runtime, localVars)
+	async Gamesheet_Event13_Act1(runtime, localVars)
+	{
+		runtime.callFunction("walletConnect");
+	},
+
+	async Gamesheet_Event18_Act1(runtime, localVars)
 	{
 		async function connectToWallet() {
 			const connectedWallet = await tonConnectUI.connectWallet();
+			runtime.globalVars.WalletConnected = true;
 			// Do something with connectedWallet if needed
 			console.log(connectedWallet);
 		}
@@ -1047,6 +1053,11 @@ const scriptsInEvents = {
 		connectToWallet().catch(error => {
 			console.error("Error connecting to wallet:", error);
 		});
+	},
+
+	async Gamesheet_Event19(runtime, localVars)
+	{
+		
 	}
 
 };
