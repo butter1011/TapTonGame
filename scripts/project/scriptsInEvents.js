@@ -1027,6 +1027,16 @@ var __defProp=Object.defineProperty,__defProps=Object.defineProperties,__getOwnP
 
 const scriptsInEvents = {
 
+	async Gamesheet_Event1_Act2(runtime, localVars)
+	{
+		console.log("wallet Connect");
+	},
+
+	async Gamesheet_Event2_Act2(runtime, localVars)
+	{
+		console.log("wallet Disconnect");
+	},
+
 	async Gamesheet_Event4_Act6(runtime, localVars)
 	{
 		let tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
@@ -1034,7 +1044,7 @@ const scriptsInEvents = {
 			buttonRootId: 'ton-connect'
 		});
 		
-		window.addEventListener('ton-connect-ui-connection-completed', (event) => {
+		window.addEventListener('ton-connect-ui-connection-started', (event) => {
 		    runtime.globalVars.WalletConnected = true;
 			runtime.callFunction("walletConnect");
 		});
@@ -1043,6 +1053,16 @@ const scriptsInEvents = {
 		    runtime.globalVars.WalletConnected = false;
 			runtime.callFunction("walletDisconnect");
 		});
+	},
+
+	async Gamesheet_Event5_Act2(runtime, localVars)
+	{
+		console.log("wallet Connect");
+	},
+
+	async Gamesheet_Event6_Act2(runtime, localVars)
+	{
+		console.log("wallet Disconnect");
 	}
 
 };
