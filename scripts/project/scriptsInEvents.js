@@ -1049,7 +1049,7 @@ const scriptsInEvents = {
 			runtime.callFunction("walletConnect");
 		});
 		
-		window.addEventListener('connection-restoring-completed', (event)=>{
+		window.addEventListener('ton-connect-ui-connection-restoring-completed', (event)=>{
 			runtime.globalVars.WalletConnected = true;
 			runtime.callFunction("walletConnect");
 		});
