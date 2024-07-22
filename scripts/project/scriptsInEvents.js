@@ -1049,9 +1049,14 @@ const scriptsInEvents = {
 			runtime.callFunction("walletConnect");
 		});
 		
-		window.addEventListener('ton-connect-ui-connection-restoring-completed', (event)=>{
-			runtime.globalVars.WalletConnected = true;
+		window.addEventListener('ton-connect-ui-connection-started', (event) => {
+		    runtime.globalVars.WalletConnected = true;
 			runtime.callFunction("walletConnect");
+		});
+		
+		window.addEventListener('ton-connect-ui-connection-error', (event)=>{
+			runtime.globalVars.WalletConnected = false;
+			runtime.callFunction("walletDisconnect");
 		});
 		
 		window.addEventListener('ton-connect-ui-disconnection', (event) => {
