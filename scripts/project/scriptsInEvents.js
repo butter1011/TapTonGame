@@ -1041,19 +1041,9 @@ const scriptsInEvents = {
 		
 	},
 
-	async Gamesheet_Event15_Act1(runtime, localVars)
+	async Gamesheet_Event17_Act1(runtime, localVars)
 	{
 		
-	},
-
-	async Gamesheet_Event19_Act1(runtime, localVars)
-	{
-		runtime.callFunction("walletConnect")
-	},
-
-	async Gamesheet_Event20_Act4(runtime, localVars)
-	{
-		runtime.callFunction("walletConnect")
 	}
 
 };
