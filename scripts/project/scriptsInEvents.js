@@ -1029,57 +1029,31 @@ const scriptsInEvents = {
 
 	async Gamesheet_Event1_Act1(runtime, localVars)
 	{
-		try {
-			const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-				manifestUrl: 'https://TON-Titan.vercel.app/tonconnect-manifest.json',
-				buttonRootId: 'ton-connect',
-			});
-		
-			await tonConnectUI.openModal();
-			const walletsList = await tonConnectUI.getWallets();
-			if(walletsList > 0){
-				runtime.globalVars.WalletConnected = True;
-			}
-		} catch(e){
-			console.log("connect error", e);
-		}
-		
+		console.log(TON_CONNECT_UI);
 	},
 
-	async Gamesheet_Event2_Act1(runtime, localVars)
+	async Gamesheet_Event3_Act6(runtime, localVars)
 	{
-		if(TON_CONNECT_UI.TonConnectUI.waitForWalletConnection){
-			runtime.globalVars.WalletConnected = True;
-		} else {
-			runtime.globalVars.WalletConnected = false;
-		}
-		
-	},
-
-	async Gamesheet_Event5_Act1(runtime, localVars)
-	{
-		const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+		let tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
 			manifestUrl: 'https://TON-Titan.vercel.app/tonconnect-manifest.json',
-			buttonRootId: 'ton-connect',
+			buttonRootId: 'ton-connect'
 		});
+		
 	},
 
-	async Gamesheet_Event18_Act1(runtime, localVars)
+	async Gamesheet_Event15_Act1(runtime, localVars)
 	{
-		const status = await TON_CONNECT_UI.TonConnectUI.waitForWalletConnection;
-		if(!TON_CONNECT_UI.TonConnectUI.waitForWalletConnection) {
-			runtime.callFunction("walletConnect");
-		}
-		console.log("status-------------->", status);
+		
 	},
 
-	async Gamesheet_Event19_Act4(runtime, localVars)
+	async Gamesheet_Event19_Act1(runtime, localVars)
 	{
-		const status = await TON_CONNECT_UI.TonConnectUI.waitForWalletConnection;
-		if(!TON_CONNECT_UI.TonConnectUI.waitForWalletConnection) {
-			runtime.callFunction("walletConnect");
-		}
-		console.log("status-------------->", status);
+		runtime.callFunction("walletConnect")
+	},
+
+	async Gamesheet_Event20_Act4(runtime, localVars)
+	{
+		runtime.callFunction("walletConnect")
 	}
 
 };
