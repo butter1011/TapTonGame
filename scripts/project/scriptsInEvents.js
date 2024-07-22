@@ -1041,6 +1041,16 @@ const scriptsInEvents = {
 		
 	},
 
+	async Gamesheet_Event4_Act2(runtime, localVars)
+	{
+		console.log("WalletConnected");
+	},
+
+	async Gamesheet_Event5_Act2(runtime, localVars)
+	{
+		console.log("Wallet Not Connected");
+	},
+
 	async Gamesheet_Event17_Act1(runtime, localVars)
 	{
 		
