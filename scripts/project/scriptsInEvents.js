@@ -1029,12 +1029,12 @@ const scriptsInEvents = {
 
 	async Gamesheet_Event1_Act2(runtime, localVars)
 	{
-		console.log("wallet Connect");
+		console.log("Wallet Connected!");
 	},
 
 	async Gamesheet_Event2_Act2(runtime, localVars)
 	{
-		console.log("wallet Disconnect");
+		console.log("Wallet Disconnected!");
 	},
 
 	async Gamesheet_Event4_Act6(runtime, localVars)
@@ -1049,20 +1049,15 @@ const scriptsInEvents = {
 			runtime.callFunction("walletConnect");
 		});
 		
+		window.addEventListener('connection-restoring-completed', (event)=>{
+			runtime.globalVars.WalletConnected = true;
+			runtime.callFunction("walletConnect");
+		});
+		
 		window.addEventListener('ton-connect-ui-disconnection', (event) => {
 		    runtime.globalVars.WalletConnected = false;
 			runtime.callFunction("walletDisconnect");
 		});
-	},
-
-	async Gamesheet_Event5_Act2(runtime, localVars)
-	{
-		console.log("wallet Connect");
-	},
-
-	async Gamesheet_Event6_Act2(runtime, localVars)
-	{
-		console.log("wallet Disconnect");
 	}
 
 };
