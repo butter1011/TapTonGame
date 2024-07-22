@@ -1044,7 +1044,7 @@ const scriptsInEvents = {
 			buttonRootId: 'ton-connect'
 		});
 		
-		window.addEventListener('ton-connect-ui-connection-started', (event) => {
+		window.addEventListener('ton-connect-ui-connection-completed', (event) => {
 		    runtime.globalVars.WalletConnected = true;
 			runtime.callFunction("walletConnect");
 		});
